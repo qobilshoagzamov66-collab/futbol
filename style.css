@@ -1,0 +1,513 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #090c0a;
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    border-bottom: 1px solid #202720;
+    background: #090c0a;
+}
+
+.navbar {
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span,
+.hero h1 span,
+.newsletter h2 span {
+    color: #a4ff4f;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 13px;
+    color: #b4bcb5;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #a4ff4f;
+}
+
+.nav-btn,
+.primary-btn {
+    display: inline-block;
+    padding: 13px 22px;
+    background: #a4ff4f;
+    color: #10150c;
+    font-weight: 700;
+    font-size: 13px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.nav-btn:hover,
+.primary-btn:hover {
+    background: #c0ff88;
+    transform: translateY(-3px);
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.tag {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #a4ff4f;
+    font-weight: 600;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 5vw, 69px);
+    line-height: 1.12;
+    margin: 25px 0;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.hero-content > p,
+.newsletter > p {
+    color: #9ca59d;
+    line-height: 1.9;
+    font-size: 14px;
+    max-width: 470px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.secondary-btn {
+    padding: 13px 22px;
+    border: 1px solid #394139;
+    border-radius: 6px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.secondary-btn:hover {
+    border-color: #a4ff4f;
+    color: #a4ff4f;
+}
+
+.stats {
+    display: flex;
+    gap: 45px;
+    margin-top: 45px;
+}
+
+.stats h2 {
+    font-size: 25px;
+}
+
+.stats p {
+    color: #828b83;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.hero-image {
+    position: relative;
+    height: 480px;
+}
+
+.hero-image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    filter: brightness(0.75);
+}
+
+.image-label {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 17px;
+    background: #111a13e8;
+    border: 1px solid #344232;
+    border-radius: 8px;
+}
+
+.image-label strong {
+    font-size: 13px;
+}
+
+.image-label p {
+    color: #9da79d;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.live-dot {
+    width: 11px;
+    height: 11px;
+    background: #a4ff4f;
+    border-radius: 50%;
+    box-shadow: 0 0 12px #a4ff4f;
+}
+
+.section {
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+    margin-top: 10px;
+    letter-spacing: -1px;
+}
+
+.section-heading > a {
+    color: #a4ff4f;
+    font-size: 13px;
+}
+
+.match-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.match-card {
+    padding: 23px;
+    background: #111612;
+    border: 1px solid #242c25;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.match-card:hover,
+.player-card:hover,
+.news-card:hover {
+    transform: translateY(-5px);
+    border-color: #526749;
+}
+
+.match-top,
+.match-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 10px;
+    color: #8d988e;
+}
+
+.finished {
+    color: #a4ff4f;
+}
+
+.teams {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 30px 0;
+    gap: 8px;
+}
+
+.teams p {
+    font-size: 11px;
+    margin-top: 12px;
+}
+
+.team-icon {
+    width: 53px;
+    height: 53px;
+    margin: auto;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.madrid {
+    background: #f1f0df;
+    color: #4261a8;
+}
+
+.barca {
+    background: #8e1537;
+    color: #f6d65b;
+}
+
+.city {
+    background: #87d6ed;
+    color: #163c65;
+}
+
+.arsenal {
+    background: #e92c43;
+    color: #ffffff;
+}
+
+.psg {
+    background: #1a376c;
+    color: #ed4774;
+}
+
+.bayern {
+    background: #d92638;
+    color: #ffffff;
+}
+
+.score {
+    font-size: 23px;
+    white-space: nowrap;
+}
+
+.match-bottom {
+    border-top: 1px solid #29312a;
+    padding-top: 17px;
+}
+
+.match-bottom span {
+    color: #a4ff4f;
+}
+
+.player-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.player-card {
+    position: relative;
+    height: 370px;
+    overflow: hidden;
+    border: 1px solid #252d26;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.player-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    filter: brightness(0.7);
+}
+
+.player-card:hover img {
+    transform: scale(1.07);
+}
+
+.player-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 25px;
+    background: linear-gradient(transparent, #050805 40%);
+}
+
+.player-info span,
+.news-content > span {
+    font-size: 10px;
+    color: #a4ff4f;
+    letter-spacing: 1px;
+}
+
+.player-info h3 {
+    font-size: 21px;
+    margin: 9px 0 5px;
+}
+
+.player-info p {
+    font-size: 12px;
+    color: #c0c8c0;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.news-card {
+    overflow: hidden;
+    background: #111612;
+    border: 1px solid #242c25;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.news-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 25px;
+}
+
+.news-content h3 {
+    font-size: 20px;
+    margin: 12px 0;
+}
+
+.news-content p {
+    color: #929b93;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.news-content a {
+    color: #a4ff4f;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.newsletter {
+    text-align: center;
+    padding-top: 65px;
+    padding-bottom: 75px;
+    margin-top: 30px;
+    margin-bottom: 70px;
+    background: radial-gradient(ellipse at top, #20351d, #101510 65%);
+    border: 1px solid #293628;
+    border-radius: 15px;
+}
+
+.newsletter h2 {
+    font-size: clamp(30px, 4vw, 45px);
+    line-height: 1.3;
+    margin: 20px 0 15px;
+}
+
+.newsletter > p {
+    margin: auto;
+}
+
+.newsletter form {
+    display: flex;
+    max-width: 480px;
+    margin: 30px auto 0;
+    gap: 10px;
+}
+
+.newsletter input {
+    flex: 1;
+    min-width: 0;
+    padding: 15px;
+    color: #ffffff;
+    background: #111711;
+    border: 1px solid #3a4639;
+    border-radius: 6px;
+    outline: none;
+}
+
+.newsletter input:focus {
+    border-color: #a4ff4f;
+}
+
+.newsletter button {
+    padding: 15px;
+    background: #a4ff4f;
+    color: #10150c;
+    border: none;
+    border-radius: 6px;
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+footer {
+    border-top: 1px solid #222922;
+    padding: 45px 0 25px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.footer-content > p {
+    font-size: 12px;
+    color: #8d978e;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links a {
+    font-size: 12px;
+    color: #b5bdb5;
+}
+
+.footer-links a:hover {
+    color: #a4ff4f;
+}
+
+.footer-content .copyright {
+    width: 100%;
+    border-top: 1px solid #252c26;
+    padding-top: 22px;
+    margin-top: 10px;
+}
+
